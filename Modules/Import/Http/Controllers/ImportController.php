@@ -18,12 +18,6 @@ class ImportController extends Controller
      */
     public function index()
     {
-        return view('import::index');
-    }
-
-    public function startScrapJsonFile()
-    {
-
         $data = json_decode(file_get_contents(storage_path('challenge.json')));
 
         $chunk = array_chunk($data,80);
@@ -32,6 +26,6 @@ class ImportController extends Controller
             UploadAndStoreUsersFromJsonFile::dispatch($data);
         }
 
-        dd('it is DONE!');
+        return view('import::index');
     }
 }

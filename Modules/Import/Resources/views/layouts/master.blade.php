@@ -4,16 +4,15 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Module Import</title>
+        <link rel="stylesheet" href="{{ asset('/assets/bootstrap-5.2.2/css/bootstrap.min.css') }}">
 
-       {{-- Laravel Vite - CSS File --}}
-       {{-- {{ module_vite('build-import', 'Resources/assets/sass/app.scss') }} --}}
+        <title>Module Import</title>
 
     </head>
     <body>
+
         @yield('content')
 
-        {{-- Laravel Vite - JS File --}}
-        {{-- {{ module_vite('build-import', 'Resources/assets/js/app.js') }} --}}
+        <script src="{{ asset('/assets/bootstrap-5.2.2/js/bootstrap.min.js') }}"></script>
     </body>
 </html>
