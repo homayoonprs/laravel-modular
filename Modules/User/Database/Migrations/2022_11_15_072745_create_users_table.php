@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->boolean('checked')->nullable()->default(false);
             $table->text('description')->nullable();
+            $table->text('address')->nullable();
             $table->text('interest')->nullable();
             $table->string('account');
             $table->timestamp('date_of_birth')->nullable();

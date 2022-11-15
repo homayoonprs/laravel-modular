@@ -22,10 +22,18 @@ class User extends Authenticatable
         'email',
         'checked',
         'description',
+        'address',
         'interest',
         'account',
         'date_of_birth',
         'credit_card',
+
+
+
+
+
+
+
         'password',
     ];
 
@@ -49,7 +57,7 @@ class User extends Authenticatable
         'date_of_birth' => 'datetime',
         'credit_card' => 'object'
     ];
-    
+
     protected static function newFactory()
     {
         return \Modules\User\Database\factories\UserFactory::new();

@@ -1,6 +1,8 @@
 <?php
 
-namespace Modules\Import\DTOs;
+namespace Modules\User\DTOs;
+
+use Modules\Core\DTOs\BaseDTO;
 
 class UserModelDTO extends BaseDTO
 {
