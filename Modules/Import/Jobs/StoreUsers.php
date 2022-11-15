@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Log;
 use Modules\User\DTOs\UserModelDTO;
 use Modules\User\Repositories\Eloquent\EloquentUserRepository;
 
-class UploadAndStoreUsersFromJsonFile implements ShouldQueue
+class StoreUsers implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
