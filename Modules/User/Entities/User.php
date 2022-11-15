@@ -2,10 +2,15 @@
 
 namespace Modules\User\Entities;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Testing\Fluent\Concerns\Has;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
@@ -27,13 +32,6 @@ class User extends Authenticatable
         'account',
         'date_of_birth',
         'credit_card',
-
-
-
-
-
-
-
         'password',
     ];
 
@@ -54,7 +52,7 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'date_of_birth' => 'datetime',
+        'date_of_birth' => 'date',
         'credit_card' => 'object'
     ];
 

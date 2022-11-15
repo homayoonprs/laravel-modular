@@ -9,5 +9,8 @@ use Modules\User\Entities\User;
 
 class EloquentUserRepository extends EloquentBaseRepository
 {
-
+    public function __construct(User $model)
+    {
+        $this->model = $model;
+    }
 }

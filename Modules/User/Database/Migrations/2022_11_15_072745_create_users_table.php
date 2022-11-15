@@ -22,10 +22,10 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->text('interest')->nullable();
             $table->string('account');
-            $table->timestamp('date_of_birth')->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->json('credit_card')->nullable();
-            $table->string('password');
+            $table->string('password')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

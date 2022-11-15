@@ -13,4 +13,5 @@
 
 Route::prefix('import')->group(function() {
     Route::get('/', 'ImportController@index');
+    Route::get('/json', 'ImportController@startScrapJsonFile');
 });
